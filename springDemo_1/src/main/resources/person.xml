@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person1" class="com.test.diEx03.Person">
+		<constructor-arg>
+			<value>月野うさぎ</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>女性</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>15</value>
+		</constructor-arg>		
+		<constructor-arg>
+			<value>888888-1231545</value>
+		</constructor-arg>		
+	</bean>
+	
+	<bean id="person2" class="com.test.diEx03.Person">
+		<constructor-arg value="水野亜美" />
+		<constructor-arg value="女性" />
+		<constructor-arg value="17" />	
+		<constructor-arg value="1212121-3423422" />		
+	</bean>
+
+	<bean id="personInfo" class="com.test.diEx03.PersonInfo">
+		<constructor-arg>
+			<ref bean="person1" />
+		</constructor-arg>
+	</bean>
+</beans>
