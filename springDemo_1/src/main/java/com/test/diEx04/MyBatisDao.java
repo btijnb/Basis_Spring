@@ -6,10 +6,10 @@ public class MyBatisDao {
 	}
 	
 	public void insertDB(){
-		System.out.println("");
+		System.out.println("Insert logic");
 	}
 	
 	public void updateDB(){
-		System.out.println("");
+		System.out.println("Update logic");
 	}
 }
