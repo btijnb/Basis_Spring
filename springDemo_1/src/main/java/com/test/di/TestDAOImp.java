@@ -1,7 +1,7 @@
 package com.test.di;
 
 public class TestDAOImp implements TestDAO {
-  //@Override [Q]なんでアノテーション消さなければならないんだろう
+  //FIXME @Override ANSWER Javaバージョンとバージョン別の仕様を確認してください。
   public void printMsg() {
     System.out.println("TestDAOImpのprintMsg()メソッドです。");
   }
