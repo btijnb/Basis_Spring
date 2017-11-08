@@ -1,4 +1,4 @@
-package com.test.diEx06;
+package com.test.diEx07;
 
 import java.util.ArrayList;
 

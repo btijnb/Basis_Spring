@@ -3,11 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!-- 
-他のオブジェクト参照は、set系列メソッド号出と同じ
-*Ctrl+Space時、自動提案される 
--->
- 
 	<bean id="player1" class="com.test.diEx06.Player">
 		<constructor-arg value="ダルビッシュ有"/>
 		<constructor-arg value="28"/>
@@ -27,7 +22,7 @@
 	</bean>
 
 	<bean id="playerInfo1" class="com.test.diEx06.PlayerInfo">
-		<property name="player"> <!-- PlayerInfoのsetPlayerメソッド-->
+		<property name="player">
 			<ref bean="player1"></ref>
 		</property>
 	</bean>
