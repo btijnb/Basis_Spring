@@ -19,7 +19,7 @@ public class PersonInfo {
     }
   }
 
-  public void setPerson(Person person) { //setPersonInfoの誤字？ //QUESTION
+  public void setPerson(Person person) { //QUESTION setPersonInfoの誤字？
     this.person = person;
   }
 }

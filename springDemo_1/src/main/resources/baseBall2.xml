@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework/schema/c"
-	xmlns:p="http://www.springframework/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id="player3" class="com.test.diEx06.Player">
 		<constructor-arg value="チュシンス"/>
@@ -24,7 +24,7 @@
 	</bean>
 
 	<bean id="baseBallTeam" class="com.test.diEx06.BaseBallTeam"
-		  c:manager="キムウンヨン" c:battingCoach="イスンチョル" c:pitchingCoach="ソンドンヨル"
+		  c:_0="キムウンヨン" c:_1="イスンチョル" c:_2="ソンドンヨル"
 		  p:hitter="カンジョンホ">
 		  <property name="pitcher" value="リュヒョンジン"/>
 	</bean>
