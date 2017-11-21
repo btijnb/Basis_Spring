@@ -35,3 +35,11 @@ create table mvc_bbs_temporary(
     
 insert into mvc_bbs_temporary(bNo, bName, bSubject, bContent, bDate, bHit, bGroup, bStep, bIndent) 
 values('n','name','subject','content','date',0,0,0,0);
+
+
+CREATE TABLE `customer` (
+  `CUST_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(100) NOT NULL,
+  `AGE` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`CUST_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
