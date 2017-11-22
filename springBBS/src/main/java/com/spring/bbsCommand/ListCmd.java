@@ -12,7 +12,7 @@ public class ListCmd implements Bcmd {
   @Override
   public void service(Model model) {
     BDAO dao = new BDAO();
-    ArrayList<BVO> bVOs = dao.list();
+    ArrayList<BVO> bVOs = dao.list(); //MEMO dao.list()の戻り値はbVOs
     model.addAttribute("list", bVOs);
   }
 }

@@ -1,20 +1,41 @@
 package com.spring.bbsController;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.bbsCommand.Bcmd;
+
 import com.spring.bbsCommand.ListCmd;
+
+import com.spring.bbsVO.BVO;
 
 @Controller
 public class BController {
-  Bcmd cmd = null;
+	Bcmd cmd = null;
+	
+	
 
-  @RequestMapping("/list")
-  public String list(Model model) {
-    cmd = new ListCmd();
-    cmd.service(model);
-    return "list";
-  }
+	
+	@RequestMapping("/list")
+	public String list(Model model){
+		System.out.println("-------------- list() 呼ぶ ---------------------");
+		cmd = new ListCmd();
+		cmd.service(model); 
+		
+		return "list";
+	}
+
+	
+	
+	@ModelAttribute("BVO")
+	public BVO formBacking(){
+		return new BVO();
+	}
+	
 }

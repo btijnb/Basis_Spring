@@ -1,6 +1,6 @@
 package com.spring.bbsVO;
 
-public class BVO { //TODO 後でmvc_bbsテーブルのフィールドに変更
+public class BVO { //TODO これはmvc_bbs_temporaryテーブルのフィールド。後でmvc_bbsテーブルのフィールドに変更
   String bNo;
   String bName;
   String bSubject;
