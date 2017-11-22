@@ -15,6 +15,6 @@ public class MainPerson {
     personInfo.setPerson(person);
     personInfo.getPersonInfo();
 
-    ctx.close(); //resource leak防止 //MEMO
+    ctx.close(); //MEMO resource leak防止
   }
 }

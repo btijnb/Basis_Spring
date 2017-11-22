@@ -1,4 +1,4 @@
-package test.com.ex;
+package com.test.ex01;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -15,12 +15,12 @@ public class Player implements InitializingBean, DisposableBean {
     this.age = age;
   }
 
-  //FIXME @Override
+  @Override
   public void afterPropertiesSet() throws Exception {
     System.out.println("Bean生成時処理する命令");
   }
 
-  //FIXME @Override
+  @Override
   public void destroy() throws Exception {
     System.out.println("Bean消滅時処理する命令");
   }
