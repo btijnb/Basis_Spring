@@ -20,8 +20,9 @@ public class MemberValidator implements Validator{
 	  
 	  String memName=member.getName();
 	  if(memName==null||memName.trim().isEmpty()){
-		  System.out.println("会員の名前を入力しなさい");
-		  errors.rejectValue("name", "入力時エラー発生");
+		  errors.rejectValue("name", "empty"); //MEMO .RejectValue for filedError, .Reject for Global Error
+//		  System.out.println("会員の名前を入力しなさい");
+//		  errors.rejectValue("name", "入力時エラー発生");
 	  }
 	  
 	  String memId=member.getId();
