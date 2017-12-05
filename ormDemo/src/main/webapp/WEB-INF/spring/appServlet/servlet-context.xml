@@ -33,13 +33,22 @@
 		<beans:property name="dataSource" ref="dataSource" />
 	</beans:bean>	
 
-<!--  	
+<!--MEMO @Serviceがうまく作動してくれて、これはいらなくなった  	
 	<beans:bean name="bbsdao" class="com.spring.ormDAO.BbsDAO">
 		<beans:property name="template" ref="template"></beans:property>
 	</beans:bean>
 -->	
 	<context:component-scan base-package="com.spring" />
 	
-	
-	
+<!-- MEMO SqlSessionFactory, SqlSessionTemplateは元々他のフォールダーに入れるべきだが、学習便宜上ここに -->	
+
+<beans:bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"	>
+	<beans:property name="dataSource" ref="dataSource"/>
+	<beans:property name="mapperLocations" value="classpath:com/spring/mapper/*.xml"/>	
+</beans:bean>
+
+<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+	<beans:constructor-arg ref="sqlSessionFactory" />
+</beans:bean>
+
 </beans:beans>
